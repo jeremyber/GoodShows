@@ -4,6 +4,9 @@ from typing import List
 
 
 class DBLoader:
+
+    #TODO: Write tests for each function
+    #TODO: insert into db
     def __init__(self, path_to_file):
         self.path_to_file = path_to_file
 
