@@ -8,6 +8,8 @@ class DBLoader:
     #TODO: Write tests for each function
     #TODO: insert into db
     def __init__(self, path_to_file):
+        if type(path_to_file)!=str:
+            raise TypeError("This constructor only takes strings")
         self.path_to_file = path_to_file
 
     def load_the_database(self):
@@ -20,6 +22,7 @@ class DBLoader:
         insert_statements: List[str] = self.get_insert_statements()
         for s in insert_statements:
             print(s)
+        return insert_statements
 
 
     def get_insert_statements(self) -> List[str]:
